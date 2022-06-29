@@ -28,7 +28,7 @@
             falsisign = drv.falsisign;
             signdiv = drv.signdiv;
           };
-          defaultApp = drv.falsisign;
+          apps.default = drv.falsisign;
           defaultPackage = drv.falsisign;
         };
     in
