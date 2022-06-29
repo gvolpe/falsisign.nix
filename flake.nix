@@ -23,13 +23,16 @@
             inherit pkgs falsisign-src;
           };
         in
-        {
-          apps = {
+		{
+		  apps.x86_64-linux= {
+			signdiv.type = "app";
+			falsisign.type = "app";
+		  };
+		  apps = {
             falsisign = drv.falsisign;
-            signdiv = drv.signdiv;
+			signdiv = drv.signdiv;
           };
-          apps.default = drv.falsisign;
-          defaultPackage = drv.falsisign;
+          packages.default = drv.falsisign;
         };
     in
     flake-utils.lib.eachDefaultSystem forSystem;
