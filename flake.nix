@@ -24,11 +24,7 @@
           };
         in
 		{
-		  apps.x86_64-linux= {
-			signdiv.type = "app";
-			falsisign.type = "app";
-		  };
-		  apps = {
+		  packages = {
             falsisign = drv.falsisign;
 			signdiv = drv.signdiv;
           };
